@@ -1,0 +1,22 @@
+
+#ifndef BOOTLOADER_H_
+#define BOOTLOADER_H_
+
+#include "stm32f1xx_hal.h"
+#include "string.h"
+/*****************************BOOTLOADER_MACROS*****************************************/
+#define D_UART							&huart1
+#define C_UART							&huart1
+#define FLASH_SECTOR2_BASE_ADDRESS 		0x08008000
+#define BL_RX_LEN						200
+
+/*****************************EXTERN VARIABLES******************************************/
+extern UART_HandleTypeDef huart1;
+/*****************************GLOBAL VARIABLES******************************************/
+uint8_t BL_rx_buffer[BL_RX_LEN];
+/*****************************FUNCTION DECLARATION**************************************/
+extern void printmsg(char *format,...);
+void BootLoader_Jump_to_User_APP();
+void BootLoader_UART_Read_Data();
+
+#endif /* BOOTLOADER_H_ */

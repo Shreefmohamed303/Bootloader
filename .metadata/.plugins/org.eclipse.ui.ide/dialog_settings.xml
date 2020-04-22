@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="D:\courses\Embedded Systems\Udemy Courses STM32\bootloader\BootLoader WorkSpace\Truestdio WorkSpace\USER_APP_STM32f103xx"/>
+		<item value="D:\courses\Embedded Systems\Udemy Courses STM32\bootloader\BootLoader WorkSpace\Truestdio WorkSpace\BootLoader_STM32F103xx"/>
+	</list>
+</section>

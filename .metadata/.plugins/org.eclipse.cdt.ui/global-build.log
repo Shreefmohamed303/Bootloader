@@ -1,0 +1,201 @@
+21:35:45 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+Src\main.o:(.data.supported_commands+0x0): multiple definition of `supported_commands'
+Src\Bootloader.o:(.data.supported_commands+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+21:36:01 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\Bootloader.o ..\Src\Bootloader.c 
+..\Src\Bootloader.c: In function 'BL_hanlde_getHelp_cmd':
+..\Src\Bootloader.c:215:46: error: 'supported_commands' undeclared (first use in this function)
+   BootLoader_Send_ACK(BL_command_code,sizeof(supported_commands));
+                                              ^~~~~~~~~~~~~~~~~~
+..\Src\Bootloader.c:215:46: note: each undeclared identifier is reported only once for each function it appears in
+21:36:14 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\Bootloader.o ..\Src\Bootloader.c 
+..\Src\Bootloader.c: In function 'BL_hanlde_getHelp_cmd':
+..\Src\Bootloader.c:197:10: warning: unused variable 'BL_command_code' [-Wunused-variable]
+  uint8_t BL_command_code = pbuffer[1];
+          ^~~~~~~~~~~~~~~
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar convert-hex sizeinfo list BootLoader_STM32F103xx.elf 
+Generate build reports...
+Converting build output to hex
+Output sent to: BootLoader_STM32F103xx.hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+   7576	    120	   1856	   9552	   2550	BootLoader_STM32F103xx.elf
+Print size information done
+Generate listing file
+Output sent to: BootLoader_STM32F103xx.list
+Generate listing file done
+Generate build reports done
+arm-atollic-eabi-objcopy.exe -O ihex BootLoader_STM32F103xx.elf BootLoader_STM32F103xx.hex 
+Info: Nothing to build for BootLoader_STM32F103xx
+21:36:37 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\Bootloader.o ..\Src\Bootloader.c 
+..\Src\Bootloader.c: In function 'BL_hanlde_getHelp_cmd':
+..\Src\Bootloader.c:197:10: warning: unused variable 'BL_command_code' [-Wunused-variable]
+  uint8_t BL_command_code = pbuffer[1];
+          ^~~~~~~~~~~~~~~
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+Src\main.o:(.data.supported_commands+0x0): multiple definition of `supported_commands'
+Src\Bootloader.o:(.data.supported_commands+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+21:36:49 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+Src\main.o:(.data.supported_commands+0x0): multiple definition of `supported_commands'
+Src\Bootloader.o:(.data.supported_commands+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+21:36:52 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+Src\main.o:(.data.supported_commands+0x0): multiple definition of `supported_commands'
+Src\Bootloader.o:(.data.supported_commands+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+21:37:03 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\Bootloader.o ..\Src\Bootloader.c 
+..\Src\Bootloader.c: In function 'BL_hanlde_getHelp_cmd':
+..\Src\Bootloader.c:197:10: warning: unused variable 'BL_command_code' [-Wunused-variable]
+  uint8_t BL_command_code = pbuffer[1];
+          ^~~~~~~~~~~~~~~
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+Src\main.o:(.data.supported_commands+0x0): multiple definition of `supported_commands'
+Src\Bootloader.o:(.data.supported_commands+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+21:37:21 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\Bootloader.o ..\Src\Bootloader.c 
+..\Src\Bootloader.c: In function 'BL_hanlde_getHelp_cmd':
+..\Src\Bootloader.c:197:10: warning: unused variable 'BL_command_code' [-Wunused-variable]
+  uint8_t BL_command_code = pbuffer[1];
+          ^~~~~~~~~~~~~~~
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+Src\main.o:(.data.supported_commands_2+0x0): multiple definition of `supported_commands_2'
+Src\Bootloader.o:(.data.supported_commands_2+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+21:38:05 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\Bootloader.o ..\Src\Bootloader.c 
+..\Src\Bootloader.c: In function 'BL_hanlde_getHelp_cmd':
+..\Src\Bootloader.c:197:10: warning: unused variable 'BL_command_code' [-Wunused-variable]
+  uint8_t BL_command_code = pbuffer[1];
+          ^~~~~~~~~~~~~~~
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+Src\main.o:(.data.supported_commands_2+0x0): multiple definition of `supported_commands_2'
+Src\Bootloader.o:(.data.supported_commands_2+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+21:38:41 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\Bootloader.o ..\Src\Bootloader.c 
+..\Src\Bootloader.c: In function 'BL_hanlde_getHelp_cmd':
+..\Src\Bootloader.c:197:10: warning: unused variable 'BL_command_code' [-Wunused-variable]
+  uint8_t BL_command_code = pbuffer[1];
+          ^~~~~~~~~~~~~~~
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+Src\main.o:(.data.supported_commands+0x0): multiple definition of `supported_commands'
+Src\Bootloader.o:(.data.supported_commands+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+21:38:57 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\Bootloader.o ..\Src\Bootloader.c 
+..\Src\Bootloader.c: In function 'BL_hanlde_getHelp_cmd':
+..\Src\Bootloader.c:205:10: warning: unused variable 'BL_command_code' [-Wunused-variable]
+  uint8_t BL_command_code = pbuffer[1];
+          ^~~~~~~~~~~~~~~
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar convert-hex sizeinfo list BootLoader_STM32F103xx.elf 
+Generate build reports...
+Converting build output to hex
+Output sent to: BootLoader_STM32F103xx.hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+   7576	    120	   1856	   9552	   2550	BootLoader_STM32F103xx.elf
+Print size information done
+Generate listing file
+Output sent to: BootLoader_STM32F103xx.list
+Generate listing file done
+Generate build reports done
+arm-atollic-eabi-objcopy.exe -O ihex BootLoader_STM32F103xx.elf BootLoader_STM32F103xx.hex 
+21:39:29 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\Bootloader.o ..\Src\Bootloader.c 
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar convert-hex sizeinfo list BootLoader_STM32F103xx.elf 
+Generate build reports...
+Converting build output to hex
+Output sent to: BootLoader_STM32F103xx.hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+   7600	    128	   1856	   9584	   2570	BootLoader_STM32F103xx.elf
+Print size information done
+Generate listing file
+Output sent to: BootLoader_STM32F103xx.list
+Generate listing file done
+Generate build reports done
+arm-atollic-eabi-objcopy.exe -O ihex BootLoader_STM32F103xx.elf BootLoader_STM32F103xx.hex 
+Info: Nothing to build for BootLoader_STM32F103xx
+Info: Nothing to build for BootLoader_STM32F103xx
+Info: Nothing to build for BootLoader_STM32F103xx
+21:49:40 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\Bootloader.o ..\Src\Bootloader.c 
+..\Src\Bootloader.c: In function 'BL_hanlde_getCID_cmd':
+..\Src\Bootloader.c:260:30: warning: passing argument 1 of 'BootLoader_UART_Write_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+   BootLoader_UART_Write_Data(&BL_chipID,BL_CID_REPLY_SIZE);
+                              ^
+..\Src\Bootloader.c:152:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t * {aka short unsigned int *}'
+ void BootLoader_UART_Write_Data(uint8_t *pbuffer, uint32_t length)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar convert-hex sizeinfo list BootLoader_STM32F103xx.elf 
+Generate build reports...
+Converting build output to hex
+Output sent to: BootLoader_STM32F103xx.hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+   7600	    128	   1856	   9584	   2570	BootLoader_STM32F103xx.elf
+Print size information done
+Generate listing file
+Output sent to: BootLoader_STM32F103xx.list
+Generate listing file done
+Generate build reports done
+arm-atollic-eabi-objcopy.exe -O ihex BootLoader_STM32F103xx.elf BootLoader_STM32F103xx.hex 
+Info: Nothing to build for BootLoader_STM32F103xx
+Info: Nothing to build for BootLoader_STM32F103xx
+21:56:28 **** Incremental Build of configuration Debug for project BootLoader_STM32F103xx ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F103xB -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\Bootloader.o ..\Src\Bootloader.c 
+arm-atollic-eabi-gcc -o BootLoader_STM32F103xx.elf Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.o Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o Src\Bootloader.o Src\main.o Src\stm32f1xx_hal_msp.o Src\stm32f1xx_it.o Src\syscalls.o Src\system_stm32f1xx.o startup\startup_stm32f103xb.o -mthumb -mcpu=cortex-m3 -T../STM32F103C8_FLASH.ld -specs=nosys.specs -static -Wl,-Map=BootLoader_STM32F103xx.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar convert-hex sizeinfo list BootLoader_STM32F103xx.elf 
+Generate build reports...
+Converting build output to hex
+Output sent to: BootLoader_STM32F103xx.hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+   7600	    128	   1856	   9584	   2570	BootLoader_STM32F103xx.elf
+Print size information done
+Generate listing file
+Output sent to: BootLoader_STM32F103xx.list
+Generate listing file done
+Generate build reports done
+arm-atollic-eabi-objcopy.exe -O ihex BootLoader_STM32F103xx.elf BootLoader_STM32F103xx.hex 
+Info: Nothing to build for BootLoader_STM32F103xx
+Info: Nothing to build for BootLoader_STM32F103xx

@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+scalability.limitTokensPerTU=true
+scalability.maximumTrivialExpressions=500000
