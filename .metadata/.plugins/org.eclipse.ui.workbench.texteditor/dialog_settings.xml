@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="GPIO_TypeDef" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="FLASH_Type_Program"/>
+			<item value="FLASHEx_Banks"/>
+			<item value="FLASHEx_Type_Erase"/>
 			<item value="GPIO_TypeDef"/>
 			<item value="MSG_OBJ_TYPE_TX"/>
 			<item value="SystemInit"/>

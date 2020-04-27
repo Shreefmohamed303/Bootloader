@@ -51,6 +51,18 @@
 #define BL_SECTOR_STATUS_REPLY_SIZE		2
 #define BL_DIS_R_W_PROTECT_REPLY_SIZE	1
 
+// Go Address cmd Defines
+#define ADDRESS_VALID					0x00
+#define ADDRESS_INVALID					0x01
+#define SRAM_SIZE 						(20*1024) //STM32F103C8 has 20KB SRAM Memory
+#define SRAM_END						(SRAM_BASE+SRAM_SIZE)
+#define FLASH_SIZE 						(64*1024) //STM32F103C8 has 64KB Flash Memory
+#define FLASH_END						(FLASH_BASE+FLASH_SIZE)
+
+// Flash Erase cmd Defines
+#define FLASH_ERASE_SUCCESS 			0x00
+#define FLASH_ERASE_FAIL 				0x01
+#define FLASH_INVALID_SECTOR			0x02
 /*****************************EXTERN VARIABLES******************************************/
 extern UART_HandleTypeDef huart1;
 extern CRC_HandleTypeDef hcrc;
@@ -67,6 +79,9 @@ uint8_t BootLoader_Verify_CRC(uint8_t *pData ,uint32_t length ,uint32_t CRC_Host
 uint8_t BootLoader_get_Version(void);
 void BootLoader_UART_Write_Data(uint8_t *pbuffer, uint32_t length);
 uint16_t get_MCU_ID_Code(void);
+uint8_t BL_verify_address(uint32_t go_address);
+uint8_t BL_Execute_Flash_Erase(uint8_t BL_page_address, uint8_t BL_number_of_pages);
+uint8_t execute_Mem_Write(uint8_t *pbuffer,uint32_t Base_Mem_Address,uint8_t payload_length);
 
 //Bootloader Handle Commands Function Prototype
 void BL_hanlde_getVersion_cmd(uint8_t* pbuffer);

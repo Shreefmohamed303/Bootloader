@@ -63,7 +63,7 @@ MEMORY
 {
 RAM (xrw)      : ORIGIN = 0x20000000, LENGTH = 20K
 /* i make change here to put this code in sector 2 */
-FLASH (rx)     : ORIGIN = 0x08000000, LENGTH = 64K 
+FLASH (rx)     : ORIGIN = 0x08008000, LENGTH = 64K 
 }
 
 /* Define output sections */
